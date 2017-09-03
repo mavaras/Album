@@ -25,7 +25,7 @@
 		<input type="submit" value="Subir archivo"/>
 	</form>
 
-	<?php 
+	<?php
 		$nickname = $_SESSION['nickname'];
 		$avatar = $_SESSION['avatar']; // Es la ruta donde está el avatar actual
 
@@ -64,16 +64,13 @@
 						if(respuesta[0] == '1' && respuesta[(respuesta.length - 1)]  == '1') {
 							console.log('Descripción cargada');
 							var text = respuesta.substr(1, respuesta.length - 2);
-							// console.log(text);
 							document.getElementById('text').innerHTML = text;
 						} else if(respuesta == 'fail') {
 							console.log('Error al conectar con el servidor');
 						} else if(respuesta == 'error') {
 							console.log('Error al actualizar base de datos.');
-							// alert(respuesta);
 						} else {
 							console.log('Error desconocido');
-							// alert(respuesta);
 						}
 					}
 				});

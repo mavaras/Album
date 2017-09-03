@@ -2,12 +2,13 @@
 
 include_once("C/controller.php");
 
-$action = @$_REQUEST['action']; 
-if($action == '') { echo "<script>console.log(',,');</script>";
-	$controller = new Controller();
-}
-
+$controller = new Controller();
 $controller->start();
+
+$action = @$_REQUEST['action']; 
+if($action == '') { // Para la primera vez solo
+	echo "<script>location.href = './V/cojones.php';</script>";
+}
 
 switch ($action) {
 	case 'login':

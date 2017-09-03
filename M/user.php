@@ -48,11 +48,20 @@ class User {
 		}
 	}
 
-	public function update() {
-
+	public function delete($cnx) {
+		$query_delete = "DELETE * FROM user WHERE email='$this->mail'";
+		$result_query_delete = mysqli_query($cnx, $query_delete);
+		if($result_query_delete) {
+			echo "<script>console.log('Usuario borrado correctamente');</script>";
+			return 'delete';
+		} 
+		else {
+			echo "<script>console.log('Usuario no borrado');</script>";
+			return 'no_delete';
+		}
 	}
 
-	public function delete() {
+	public function update() {
 
 	}
 

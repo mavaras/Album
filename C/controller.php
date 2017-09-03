@@ -2,9 +2,6 @@
 
 include_once("M/model.php");
 
-$controller = new Controller();
-
-
 class Controller {
 	public $model,
 		   $conexion;
@@ -13,8 +10,8 @@ class Controller {
 		//header("refresh:1; ./V/cojones.php"); // Cutrez
 		//echo "<script>location.href = './V/cojones.php';</script>";
 	}
-
-	public function what_to_do($action) {
+	
+	/*public function what_to_do($action) {
 		switch ($action) {
 			case 'login':
 				echo "<script>console.log('login');</script>";
@@ -29,7 +26,7 @@ class Controller {
 			default:
 				break;
 		}
-	}
+	}*/
 
 	public function login() {
 		$pene = $this->model->get_login();
@@ -44,10 +41,10 @@ class Controller {
 	public function register() {
 		$pene = $this->model->get_register();
 		if($pene == 'register') { echo "<script>console.log('register');</script>";
-			//echo "<script>location.href = './V/cojones.php';</script>";
+			echo "<script>location.href = './V/cojones.php';</script>";
 		}
 		else { echo "<script>console.log('register!');</script>";
-			//echo "<script>location.href = './V/cojones.php';</script>";
+			echo "<script>location.href = './V/cojones.php';</script>";
 		}
 	}
 
