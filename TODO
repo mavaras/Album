@@ -1,0 +1,8 @@
+-> Al subir o coger una foto se coloca en el último lugar; luego que pueda cambiar el orden de las fotos de su álbum.
+-> Cómo hacer el sistema de amigos. Nueva tabla? Cada usuario tiene que tener guardada su lista de amigos. Buscador (Esteban sabe por su aplicación de mierda. Su "aplicación".).
+-> Que Esteban incluya en profile.php un script de Javascript para recoger el texto del textarea y
+que lo muestre como la biografía del usuario. Nuevo campo en la tabla USER??
+-> Hacer logout
+-> Crear la carpeta personal de cada usuario cuando se registra o cuando sube su primera foto?
+-> Una vez portado a linux, instalar ahí SMTP para incluir el envío de correos.
+-> Hacer el cruze de tablas ese que había que hacer.
