@@ -5,7 +5,8 @@
 	session_start();
 	$conexion = mysqli_connect($host, $user, $pass, $db);
 	if(!$conexion) {
-		echo "<script>console.log('Error al conectarse a la base de datos (img.php)');</script>";
+		// echo "<script>console.log('Error al conectarse a la base de datos (img.php)');</script>";
+		echo "fail";
 	} 
 	else {
 		$description = $_POST['description'];
@@ -17,14 +18,17 @@
 		$result_query_insert = mysqli_query($conexion, $query_insert);
 		if($result_query_insert) {
 			$aux = $_SESSION['nickname'];
-			$path = 'images/' . $aux . '/' . $name . '/';
-			echo $path;
+			$path = '../Multimedia/' . $aux . '/' . $name . '/';
+			// echo $path;
 			mkdir($path, 0777, true);
+			// echo "<script>location.href = '</script>";
 
 			//header("refresh:1; ./photos.php");
+			echo "1";
 		}
 		else {
-			echo "<script>console.log('Error en query_insert (addAlbum.php);</script>";
+			// echo "<script>console.log('Error en query_insert (addAlbum.php);</script>";
+			echo "error";
 		}
 	}
 ?>

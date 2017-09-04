@@ -10,7 +10,7 @@
 	<ul class="nav nav-tabs">
 	  	<li role="presentation" class="active"><a href="profile.php">Home</a></li>
 	  	<li role="presentation"><a href="friends.php">Friends</a></li>
-	  	<li role="presentation"><a href="photos.php">Photos</a></li>
+	  	<li role="presentation"><a href="photos.php?visit=1">Photos</a></li>
 	  	<li class="perfil_de" role="presentation">Perfil de <?php session_start(); echo $_SESSION['nickname']; ?></li>
 	  	<li role="presentation"><a href="modify.php">M</a></li>
 	  	<li role="presentation"><a href="/Album/C/logout.php">S</a></li>

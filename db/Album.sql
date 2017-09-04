@@ -36,3 +36,9 @@ CREATE TABLE esteban_y_mario.album_photo (
 	FOREIGN KEY(id_photo) REFERENCES photo(id) ON DELETE CASCADE,
 	PRIMARY KEY(id_album, id_photo)
 );
+
+-- Consultas
+
+-- SELECT *
+-- FROM album_photo AS AP, album AS A, photo AS P
+-- WHERE A.id = AP.id_album AND P.id = AP.id_photo AND A.id = 1;
